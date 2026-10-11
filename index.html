@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">NxDOM — Bangun aplikasi dari satu CLI</title>
+  <meta name="description" content="NxDOM CLI — bangun aplikasi Backend, Desktop, Mobile, dan Web dari satu CLI. Pilih menu, tekan Enter, jadi." data-i18n-attr="content|meta.desc" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NxDOM — Bangun aplikasi dari satu CLI" />
+  <meta property="og:description" content="Backend PHP, Desktop Electron, Mobile Expo, Web Express, dan Web statik — semua dikelola dari terminal. Agent AI bawaan, modul siap pakai, EXE portabel." />
+  <meta property="og:url" content="https://nxdom.org/" />
+  <meta property="og:image" content="https://unpkg.com/nxdom-cli@latest/screenshot/a1.png" />
+  <meta property="og:locale" content="id_ID" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <img src="logo.png" alt="Logo NxDOM" class="logo" />
+        <span>NxDOM</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#fitur" data-i18n="nav.fitur">Fitur</a>
+        <a href="#runtime" data-i18n="nav.runtime">Runtime</a>
+        <a href="#tampilan" data-i18n="nav.tampilan">Tampilan</a>
+        <a href="#mulai" data-i18n="nav.mulai">Cara Mulai</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="https://nxdom.org/docs" target="_blank" rel="noopener" data-i18n="nav.docs">Docs</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/sponsors/iyanrsaleh" target="_blank" rel="noopener" style="color: #db61a2; border-color: transparent; display: inline-flex; align-items: center; gap: 6px;">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25z"></path></svg>
+          Sponsor
+        </a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="id" class="active">ID</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#download" data-i18n="nav.download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.badge">Nxdom CLI v1.0.17 · MIT</p>
+          <h1 data-i18n-html="hero.title">Bangun aplikasi dari <span class="accent">satu CLI</span></h1>
+          <p class="lede" data-i18n-html="hero.desc">
+            <strong>NxDOM</strong> — Nusantara eXtreme Development Object Model.
+            Backend PHP, Desktop Electron, Mobile Expo, Web Express, dan Web
+            statik — semua dikelola dari terminal. Pilih menu, tekan Enter, jadi.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#download" data-i18n="hero.cta1">Download untuk Windows</a>
+            <a class="btn btn-ghost" href="https://nxdom.org/docs" target="_blank" rel="noopener" data-i18n="hero.cta2">Dokumentasi</a>
+          </div>
+          <div class="install-box" role="group" aria-label="Perintah instalasi">
+            <code id="install-cmd">npm install --global nxdom-cli</code>
+            <button class="copy-btn" id="copy-install" aria-label="Salin perintah"><span data-i18n="install.copy">Copy</span></button>
+          </div>
+          <p class="hero-note" data-i18n="hero.note">Juga tersedia EXE portabel — tanpa installer, tanpa Node.js.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="term">
+            <div class="term-bar"><span></span><span></span><span></span><em>terminal</em></div>
+            <pre class="term-body"><span class="t-dim">$</span> <span class="t-cmd">npm install --global nxdom-cli</span>
+<span class="t-dim">added 1 package in 4s</span>
+
+<span class="t-dim">$</span> <span class="t-cmd">cd D:\proyek &amp;&amp; nxdom</span>
+
+<span class="t-blue">Nxdom Framework</span>
+Nusantara eXtreme Development Object Model
+<span class="t-dim">Version</span>     <span class="t-ok">v1.0.17</span>
+<span class="t-dim">Proyek</span>      D:\proyek
+<span class="t-dim">Runtime</span>     <span class="t-ok">✓ Desktop</span> · <span class="t-ok">✓ Mobile</span>
+
+<span class="t-ok">❯ Backend</span>
+  Modules
+  Desktop
+  Mobile
+  Web(express/node)
+  Web (statik)
+  Component
+
+<span class="t-dim">↑↓ pilih · Enter buka · Esc kembali</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KENAPA -->
+    <section class="why" id="fitur">
+      <div class="container">
+        <h2 data-i18n="fit.title">Kenapa NxDOM?</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">⬢</div>
+            <h3 data-i18n="fit.1t">Semua runtime, satu CLI</h3>
+            <p data-i18n="fit.1d">Backend, Desktop, Mobile, Web Express, dan Web statik — dikelola dari satu tempat dengan pola kerja yang sama.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">▣</div>
+            <h3 data-i18n="fit.2t">Modul siap pakai</h3>
+            <p data-i18n="fit.2d">Tombol, form, navigasi, chart, ikon, dan banyak lagi. Modul wajib tiap runtime dicek dan dipasang otomatis.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✦</div>
+            <h3 data-i18n="fit.3t">Agent AI bawaan</h3>
+            <p data-i18n="fit.3d">Chat streaming, 22+ provider cloud &amp; lokal. Asisten bisa mengeksekusi install, migrate, hingga update framework — selalu dengan konfirmasi.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">↹</div>
+            <h3 data-i18n="fit.4t">Tanpa konfigurasi rumit</h3>
+            <p data-i18n-html="fit.4d">Menu interaktif dengan tombol panah. Tidak perlu hafal perintah — tapi tetap ada shell <code>❯</code> bagi yang suka ketik cepat.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⊞</div>
+            <h3 data-i18n="fit.5t">EXE portabel</h3>
+            <p data-i18n-html="fit.5d">Satu file <code>nxdom.exe</code> untuk Windows — tanpa installer, tanpa Node.js. Salin ke folder mana pun, langsung jalan.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⟳</div>
+            <h3 data-i18n="fit.6t">Server lokal + live reload</h3>
+            <p data-i18n="fit.6d">Server statis dan PHP bawaan dengan live reload. Ubah file, browser ikut segarkan — tanpa ekstensi tambahan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNTIME -->
+    <section class="runtimes" id="runtime">
+      <div class="container">
+        <h2 data-i18n="rt.title">Runtime yang didukung</h2>
+        <div class="runtime-table" role="table">
+          <div class="rt rt-head" role="row">
+            <span data-i18n="rt.h1">Runtime</span><span data-i18n="rt.h2">Teknologi</span><span data-i18n="rt.h3">Untuk apa</span>
+          </div>
+          <div class="rt" role="row">
+            <span class="rt-name">Backend</span><span>PHP</span>
+            <span data-i18n="rt.1">API &amp; aplikasi web, migrasi database, generator controller</span>
+          </div>
+          <div class="rt" role="row">
+            <span class="rt-name">Mobile</span><span>Expo / React Native</span>
+            <span data-i18n="rt.2">Aplikasi Android &amp; Web dari satu kode — QR scan langsung jalan</span>
+          </div>
+          <div class="rt" role="row">
+            <span class="rt-name">Desktop</span><span>Electron</span>
+            <span data-i18n="rt.3">Aplikasi desktop Windows</span>
+          </div>
+          <div class="rt" role="row">
+            <span class="rt-name">Web (Express/Node)</span><span>Express</span>
+            <span data-i18n="rt.4">Aplikasi web dengan server Node</span>
+          </div>
+          <div class="rt" role="row">
+            <span class="rt-name">Web (statik)</span><span>HTML/CSS/JS</span>
+            <span data-i18n="rt.5">SPA ringan tanpa server dev penuh</span>
+          </div>
+        </div>
+        <p class="runtimes-extra" data-i18n-html="rt.extra">
+          Plus <strong>Component sets UI</strong> — Face, Fluen, Git, Gnumix, IDE, Mcbook, dan lainnya.
+          Ganti set semudah pilih menu.
+        </p>
+      </div>
+    </section>
+
+    <!-- AI HIGHLIGHT -->
+    <section class="ai-hl">
+      <div class="container ai-grid">
+        <div class="ai-copy">
+          <p class="eyebrow" data-i18n="ai.badge">Agent AI bawaan</p>
+          <h2 class="ai-title" data-i18n="ai.title">Tanya, dia yang kerjakan</h2>
+          <p class="ai-lede" data-i18n-html="ai.lede">
+            Ketik langsung di baris <code>❯</code> tanpa awalan <code>/</code> —
+            Asisten membaca runtime, modul, dan config proyekmu, lalu mengeksekusi
+            dengan konfirmasi di terminal.
+          </p>
+          <ul class="ai-list">
+            <li data-i18n="ai.1">“Install runtime Mobile beserta modul wajibnya”</li>
+            <li data-i18n="ai.2">“Pasang modul alerts, branch, dan chart”</li>
+            <li data-i18n="ai.3">“Update models Backend dari sumber terbaru”</li>
+            <li data-i18n="ai.4">“Migrasi database — jalankan migrasi pending”</li>
+          </ul>
+          <p class="ai-token" data-i18n-html="ai.token">Token per balasan &amp; sesi: <code>↑ input · ↓ output · ∑ total</code></p>
+        </div>
+        <div class="term ai-term" aria-hidden="true">
+          <div class="term-bar"><span></span><span></span><span></span><em>❯ chat</em></div>
+          <pre class="term-body"><span class="t-dim">Anda</span>
+install runtime mobile beserta modul wajibnya
+
+<span class="t-dim">Konfirmasi</span> <span class="t-warn">runtime_action install mobile</span>
+<span class="t-dim">Modul wajib: Buttons, Firebase, navigation,
+React, Fonts, Properti</span>
+<span class="t-ok">✓ Install selesai</span>
+
+<span class="t-blue">AI · claude-sonnet-4-5 · anthropic</span>
+<span data-i18n="ai.term1">Runtime Mobile terpasang beserta 6 modul wajib.</span>
+<span data-i18n="ai.term2">Jalankan Start untuk membuka QR Expo.</span>
+
+<span class="t-dim">↑ 24 · ↓ 132 · ∑ 156 · sesi 1</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAMPILAN -->
+    <section class="shots" id="tampilan">
+      <div class="container">
+        <h2 data-i18n="sh.title">Tampilan</h2>
+        <div class="shot-main">
+          <figure>
+            <img src="https://unpkg.com/nxdom-cli@latest/screenshot/a1.png" alt="Menu Runtime nxdom" loading="lazy" />
+            <figcaption data-i18n="sh.cap1">Menu Runtime — beranda nxdom</figcaption>
+          </figure>
+        </div>
+        <div class="shot-grid">
+          <figure>
+            <img src="https://unpkg.com/nxdom-cli@latest/screenshot/a2.png" alt="Pengaturan Asisten nxdom" loading="lazy" />
+            <figcaption data-i18n="sh.cap2">Pengaturan Asisten AI</figcaption>
+          </figure>
+          <figure>
+            <img src="https://unpkg.com/nxdom-cli@latest/screenshot/a3.png" alt="Konfirmasi aksi Asisten nxdom" loading="lazy" />
+            <figcaption data-i18n="sh.cap3">Konfirmasi sebelum aksi berdampak</figcaption>
+          </figure>
+          <figure>
+            <img src="https://unpkg.com/nxdom-cli@latest/screenshot/a4.png" alt="Progress operasi Asisten nxdom" loading="lazy" />
+            <figcaption data-i18n="sh.cap4">Progress operasi</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- MULAI -->
+    <section class="start" id="mulai">
+      <div class="container">
+        <h2 data-i18n="st.title">Cara mulai</h2>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="st.1t">Pasang</h3>
+            <pre><code>npm install --global nxdom-cli</code></pre>
+            <p class="step-alt" data-i18n-html="st.1a">atau tanpa instalasi: <code>npx nxdom-cli</code>, atau unduh EXE portabel.</p>
+          </li>
+          <li>
+            <h3 data-i18n="st.2t">Buka di proyekmu</h3>
+            <pre><code>cd D:\path\ke\proyek
+nxdom</code></pre>
+            <p class="step-alt" data-i18n="st.2a">Menu Runtime langsung tampil.</p>
+          </li>
+          <li>
+            <h3 data-i18n="st.3t">Pilih runtime → Install → Start</h3>
+            <pre><code>Module → Install → Config → Start → Log → Stop</code></pre>
+            <p class="step-alt" data-i18n="st.3a">Mobile langsung tampil QR code — scan dari HP, aplikasi berjalan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section class="download" id="download">
+      <div class="container download-grid">
+        <div class="dl-card">
+          <h3>npm</h3>
+          <p data-i18n="dl.1">Windows, macOS, Linux. Butuh Node.js ≥ 20.17 dan npm.</p>
+          <pre><code>npm install --global nxdom-cli</code></pre>
+          <p class="dl-note" data-i18n="dl.1n">Update: npm update --global nxdom-cli</p>
+        </div>
+        <div class="dl-card">
+          <h3 data-i18n="dl.2t">EXE portabel</h3>
+          <p data-i18n="dl.2">Windows x64 — satu file, tanpa installer, tanpa Node.js.</p>
+          <p class="dl-note" data-i18n="dl.2n">File baru diunduh dapat memicu peringatan SmartScreen (belum ditandatangani digital). Verifikasi integritas dengan SHA256 yang disertakan.</p>
+          <p class="dl-note" data-i18n="dl.2x">Aksi tertentu tetap butuh tool eksternal: npm/npx (Desktop, Mobile, Web), PHP/Composer (Backend), internet (GitHub &amp; provider AI).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container faq-wrap">
+        <h2 data-i18n="faq.title">FAQ</h2>
+        <details>
+          <summary data-i18n="faq.1q">Apakah NxDOM gratis?</summary>
+          <p data-i18n="faq.1a">Ya, lisensi MIT.</p>
+        </details>
+        <details>
+          <summary data-i18n-html="faq.2q">Apakah butuh Node.js?</summary>
+          <p data-i18n-html="faq.2a">Versi npm butuh Node.js ≥ 20.17. Versi EXE portabel tidak butuh Node sama sekali.</p>
+        </details>
+        <details>
+          <summary data-i18n-html="faq.3q">Port sudah dipakai (mis. 9002)?</summary>
+          <p data-i18n-html="faq.3a">Menu runtime → <strong>Stop</strong> → <strong>Start</strong>. Nxdom otomatis mencoba menghentikan proses lama.</p>
+        </details>
+        <details>
+          <summary data-i18n-html="faq.4q">Browser tidak terbuka saat menekan <code>w</code>?</summary>
+          <p data-i18n-html="faq.4a">Pastikan status berjalan (titik hijau di menu Log), lalu tekan <code>↻ Refresh</code>.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq.5q">Rate limit GitHub habis?</summary>
+          <p data-i18n-html="faq.5a">Isi <code>GITHUB_TOKEN</code> di konfigurasi atau tunggu reset limit. Cek sumber aktif dengan <code>nxdom info</code>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Logo NxDOM" class="logo" />
+        <div>
+          <strong>NxDOM</strong>
+          <p data-i18n="foot.slogan">Nusantara eXtreme Development Object Model</p>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a href="https://nxdom.org/docs" target="_blank" rel="noopener" data-i18n="foot.link1">Dokumentasi</a>
+        <a href="https://github.com/Nxadom/framework" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/Nxadom/framework/issues" target="_blank" rel="noopener" data-i18n="foot.link3">Lapor bug</a>
+        <a href="https://github.com/sponsors/iyanrsaleh" target="_blank" rel="noopener" class="text-pink" data-i18n="foot.link3b">Sponsor</a>
+      </nav>
+      <p class="footer-copy" data-i18n="foot.copy">Lisensi MIT · © 2026 NxDOM</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
